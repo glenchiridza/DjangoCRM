@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a2631d-83b3-407e-827a-ad45b291f97e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leads/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djcrm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djcrm/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,5 +42,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="739" y="151" width="526" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614533783317">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="739" y="151" width="526" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1614533783317" />
   </component>
 </project>

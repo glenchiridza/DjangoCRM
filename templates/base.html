@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCRM</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src ="{% static 'dist/js/bootstrap.min.js' %}"></script>
+
+    <script src="static 'assets/js/vendor/jquery/jquery-slim.min.js"></script>
+
+</head>
+<body>
+
+{% include "navbar.html" %}
+
+
+{% block content %}
+{% endblock %}
+
+
+{% include "scripts.html" %}
+
+</body>
+</html>

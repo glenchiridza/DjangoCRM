@@ -1,28 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Details Page</title>
+{% extends "base.html" %}
 
-    <style>
-        .lead {
-        padding:10px 6px 10px 6px;
-        margin-top: 10px;
-        background-color:#6c757d;
-        width:100%;
-        }
-    </style>
-</head>
-<body>
-<a href="{% url 'leads:lead-list' %}">Back</a>
-<hr/>
-<h1>{{lead.first_name}}'s Details</h1>
-<p>Age : {{lead.age}}</p>
+{% block content %}
 
-<p>Agent responsible assigned for {{lead.first_name}} is {{lead.agent}}</p>
-<hr/>
-<!--<a href="/leads/{{lead.pk}}/update">Update</a>-->
-<a href="{% url 'leads:lead-update' lead.pk %}">Update</a>
-<a href="{% url 'leads:lead-delete' lead.pk %}">Delete</a>
-</body>
-</html>
+<div class="container">
+
+
+    <a href="{% url 'leads:lead-list' %}">Back</a>
+    <hr/>
+
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <p class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">{{lead.first_name}}'s Details</p>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Details</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+    <p>Age : {{lead.age}}</p>
+          <p>Full Name: {{lead.first_name}} {{lead.last_name}}</p>
+          <p>Location: Zimbabawe</p>
+          <p>Cell: +263774291926</p>
+
+    <p>Agent responsible assigned for {{lead.first_name}} is {{lead.agent}}</p>
+    <hr/>
+      </div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">..sdds.</div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">..sdsd.</div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">..sddssd.</div>
+    </div>
+  </div>
+</div>
+    <hr/>
+    <!--<a href="/leads/{{lead.pk}}/update">Update</a>-->
+
+    <a href="{% url 'leads:lead-update' lead.pk %}">Update</a>
+    <a href="{% url 'leads:lead-delete' lead.pk %}">Delete</a>
+
+</div>
+{% endblock %}

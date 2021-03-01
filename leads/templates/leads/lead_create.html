@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Details Page</title>
-
-    <style>
-        .lead {
-        padding:10px 6px 10px 6px;
-        margin-top: 10px;
-        background-color:#6c757d;
-        width:100%;
-        }
-    </style>
-</head>
-<body>
+{% block content %}
+<div class="container">
     <a href="{% url 'leads:lead-list'%}">Back</a>
     <hr/>
     <h1>Create a new Lead</h1>
@@ -31,5 +10,5 @@
         {{form.as_p}}
         <button type="submit">submit</button>
     </form>
-</body>
-</html>
+</div>
+{% endblock %}

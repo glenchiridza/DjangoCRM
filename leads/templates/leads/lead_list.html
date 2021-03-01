@@ -1,28 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+{% extends "base.html" %}
 
-    <style>
-        .lead {
-        padding:10px 6px 10px 6px;
-        margin-top: 10px;
-        background-color:#6c757d;
-        width:100%;
-        }
-    </style>
-</head>
-<body>
-<!--<a href="/leads/create">Create new Lead</a>-->
-<a href="{% url 'leads:lead-create' %}">Create new Lead</a>
-<hr/>
-<h1>Our Leads</h1>
-{% for lead in leads %}
-<div class="lead">
-<!--    <a href="/leads/{{lead.pk}}">{{lead.first_name }} {{lead.last_name}} </a> Age: {{lead.age}}-->
-    <a href="{% url 'leads:lead-detail' lead.pk %}">{{lead.first_name }} {{lead.last_name}} </a> Age: {{lead.age}}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+
+<section>
+<div class="container align-items-center mb-3 mt-4  d-flex justify-content-between" >
+    <div class="row">
+    <h1>Our Leads</h1>
+    </div>
+    <div class="row">
+        <a href="{% url 'leads:lead-create' %}">Create new Lead</a>
+    </div>
 </div>
-{% endfor %}
-</body>
-</html>
+
+
+<div class="row">
+    {% for lead in leads %}
+    <div class="col-md-4 mb-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-img-top bg-secondary">
+                 <img class="img-responsive rounded-circle" src="{% static 'user_image/me.jpg' %}" alt="Card image cap" style="height:90px; width:auto;">
+            </div>
+          <div class="card-body">
+            <h5 class="card-title">{{lead.first_name }} {{lead.last_name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{% url 'leads:lead-detail' lead.pk %}" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+            <!--<a href="/leads/create">Create new Lead</a>-->
+    </div>
+
+        {% endfor %}
+</div>
+</section>
+
+</div>
+{% endblock %}

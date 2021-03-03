@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect,reverse
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from .models import Lead, Agent
 from .forms import LeadForm, LeadModelForm
-from django.views.generic import (TemplateView, ListView,DetailView,CreateView,
-                                  UpdateView,DeleteView)
+from django.views.generic import (TemplateView, ListView, DetailView, CreateView,
+                                  UpdateView, DeleteView)
 
 
 # CRUD
@@ -14,7 +15,7 @@ class StartPageView(TemplateView):
 
 
 def start_page(request):
-    return render(request,'startpage.html')
+    return render(request, 'startpage.html')
 
 
 class LeadListView(ListView):
@@ -54,6 +55,17 @@ class CreateLeadView(CreateView):
     def get_success_url(self):
         return reverse("leads:lead-list")
 
+    def form_valid(self, form):
+        # sending email, overriding the form_valid function from CreateView
+        send_mail(
+            subject="Lead created",
+            message="view new lead in lead listing",
+            from_email="glenchi@gmail.com",
+            recipient_list=["glenchiridz@gmail.com"]
+        )
+        # after continue to super functionality
+        return super(CreateLeadView, self).form_valid(form)
+
 
 def lead_create(request):
     form = LeadModelForm()
@@ -88,7 +100,8 @@ class UpdateLeadView(UpdateView):
     def get_success_url(self):
         return reverse('leads:lead-list')
 
-def lead_update(request,pk):
+
+def lead_update(request, pk):
     lead = Lead.objects.get(id=pk)
     form = LeadModelForm(instance=lead)
     if request.method == "POST":
@@ -96,11 +109,11 @@ def lead_update(request,pk):
         if form.is_valid():
             form.save()
             return redirect("/leads")
-    context ={
-        "form":form,
-        "lead":lead
+    context = {
+        "form": form,
+        "lead": lead
     }
-    return render(request,'leads/lead_update.html',context)
+    return render(request, 'leads/lead_update.html', context)
 
 
 class DeleteLeadView(DeleteView):
@@ -108,7 +121,7 @@ class DeleteLeadView(DeleteView):
     queryset = Lead.objects.all()
 
     def get_success_url(self):
-        return  reverse("leads:lead-list")
+        return reverse("leads:lead-list")
 
 
 def lead_delete(request, pk):

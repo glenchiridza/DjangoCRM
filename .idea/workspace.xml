@@ -2,63 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a2631d-83b3-407e-827a-ad45b291f97e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leads/templates/leads/lead_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leads/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djcrm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djcrm/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djcrm/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djcrm/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leads/templates/leads/lead_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/leads/templates/leads/lead_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leads/templates/leads/lead_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/leads/templates/leads/lead_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leads/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/leads/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leads/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/leads/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/src/application.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/src/ie-emulation-modes-warning.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/src/pwa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/vendor/anchor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/vendor/clipboard.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/vendor/holder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/vendor/jquery-slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/vendor/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/alert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/collapse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/dropdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/popover.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/scrollspy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/tab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/src/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/alert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/collapse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/dropdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/popover.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/scrollspy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/tab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/unit/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/vendor/jquery-1.9.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/vendor/qunit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/vendor/qunit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/button.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/carousel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/collapse.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/dropdown.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/modal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/popover.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/scrollspy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/tab.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tests/visual/tooltip.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -21,9 +21,15 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
+    {% if not request.user.is_authenticated %}
         <button class="btn btn-success mr-sm-2" href="#">Signup</button>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+      hi {{request.user.username}}
+     <a href="{% url 'logout' %}" class="btn btn-success">Logout</a>
 
-        <button class="btn btn-success" href="#">Login</button>
-
+    {% else %}
+        <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+    {% endif %}
   </div>
 </nav>

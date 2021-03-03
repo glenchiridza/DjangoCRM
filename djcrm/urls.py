@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from leads.views import start_page
+from leads.views import start_page, StartPageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',StartPageView.as_view(), name="start-page"),
     path('leads/',include('leads.urls', namespace="leads")),
-    path('',start_page,name="start-page")
+    # path('',start_page,name="start-page")
 ]

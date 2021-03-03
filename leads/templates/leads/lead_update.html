@@ -1,18 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <div class="container">
 
 
-    <a href="{% url 'leads:lead-detail' lead.pk %}">Back</a>
+    <a href="{% url 'leads:lead-list' %}">Back</a>
     <hr/>
-    <h1>Update Lead Info: For : {{lead.first_name}} {{lead.last_name}}</h1>
-    <form method="post">
+
+<div class="row">
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a href="{% url 'leads:lead-detail' lead.pk %}" class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+          About</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+          Review</a>
+      <a href="{% url 'leads:lead-update' lead.pk %}" class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+          Profile Update</a>
+    </div>
+  </div>
+  <div class="col-8">
+      <div>
+          <p class="text-muted">LEAD</p>
+    <h2>{{lead.first_name}} {{lead.last_name}}</h2>
+    </div>
+
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">submit</button>
     </form>
+ <hr/>
+    <a class="btn btn-danger" href="{% url 'leads:lead-delete' lead.pk %}">Delete</a>
 
+    <p>Agent responsible assigned for {{lead.first_name}} is {{lead.agent}}</p>
+    <hr/>
+      </div>
+       </div>
+  </div>
+</div>
 
 </div>
 {% endblock %}
